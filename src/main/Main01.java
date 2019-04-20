@@ -60,38 +60,46 @@ public class Main01 {
 				s.setBssecName(bssecKey);
 				s.setBusinessTypeClassName(businessKey);
 				s.setRegion("完了");
+				s.setIndex(Long.MAX_VALUE - 3);
 				list.add(s);
 				s = new Settle();
 				s.setBssecName(bssecKey);
 				s.setBusinessTypeClassName(businessKey);
 				s.setRegion("進行中");
+				s.setIndex(Long.MAX_VALUE - 2);
 				list.add(s);
 				s = new Settle();
 				s.setBssecName(bssecKey);
 				s.setBusinessTypeClassName(businessKey);
 				s.setRegion("その他");
+				s.setIndex(Long.MAX_VALUE - 1);
 				list.add(s);
 				s = new Settle();
 				s.setBssecName(bssecKey);
 				s.setBusinessTypeClassName(businessKey);
 				s.setRegion("合計");
+				s.setIndex(Long.MAX_VALUE);
 				list.add(s);
 			}
 			s = new Settle();
 			s.setBssecName(bssecKey);
 			s.setRegion("完了");
+			s.setIndex(Long.MAX_VALUE - 3);
 			list.add(s);
 			s = new Settle();
 			s.setBssecName(bssecKey);
 			s.setRegion("進行中");
+			s.setIndex(Long.MAX_VALUE - 2);
 			list.add(s);
 			s = new Settle();
 			s.setBssecName(bssecKey);
 			s.setRegion("その他");
+			s.setIndex(Long.MAX_VALUE - 1);
 			list.add(s);
 			s = new Settle();
 			s.setBssecName(bssecKey);
 			s.setRegion("合計");
+			s.setIndex(Long.MAX_VALUE);
 			list.add(s);
 		}
 
@@ -107,8 +115,8 @@ public class Main01 {
 				.thenComparing(Settle::getBusinessTypeClassName,
 						Comparator.nullsLast(Comparator.naturalOrder()))
 
-				.thenComparing(Settle::getRegion,
-						Comparator.nullsFirst(Comparator.naturalOrder()))
+				//				.thenComparing(Settle::getRegion,
+				//						Comparator.nullsFirst(Comparator.naturalOrder()))
 
 				.thenComparing(Settle::getIndex);
 

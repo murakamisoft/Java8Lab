@@ -47,6 +47,16 @@ public class TestData {
 		s.setBusinessTypeClassName("建築");
 		list.add(s);
 
+		s = new Settle();
+		s.setBssecName("山本支店");
+		s.setBusinessTypeClassName("建築");
+		list.add(s);
+
+		s = new Settle();
+		s.setBssecName("山本支店");
+		s.setBusinessTypeClassName("建築");
+		list.add(s);
+
 		return list;
 	}
 
